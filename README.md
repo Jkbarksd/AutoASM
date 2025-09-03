@@ -8,6 +8,9 @@ AutoASM is a Python script that automates reconnaissance of HackerOne assets. Fo
 - performs port scanning
 - optionally fingerprints technologies using Wappalyzer
 
+- provides an optional AI-powered summary of high-risk assets using NVD CVE data
+
+
 Results are stored under `output/<domain>/`.
 
 ## Dependencies
@@ -19,6 +22,9 @@ The script requires Python 3 and the following external tools to be installed an
 - `subjack`
 - `nmap`
 - `python-Wappalyzer` (optional, for technology fingerprinting)
+
+- `requests` (for CVE lookups used by the AI summary)
+
 
 Each tool has its own installation method; consult their respective documentation. For example:
 
@@ -32,5 +38,8 @@ pip install python-Wappalyzer
 python optimized_recon.py <target-domain or file>
 ```
 
+
+Run `python optimized_recon.py --help` to see all options. The AI summary is enabled by default; disable it with `--no-ai`.
 Run `python optimized_recon.py --help` to see all options.
+
 
