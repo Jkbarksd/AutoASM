@@ -3,7 +3,9 @@ from typing import Iterable
 
 from . import utils
 from .wappalyzer_utils import HAS_WAPPALYZER, wappalyze_alive_list
+
 from .ai_summary import summarize_domain
+
 
 
 REQUIRED_CMDS = ["assetfinder", "httprobe", "subjack", "nmap"]
@@ -82,5 +84,6 @@ def recon_domain(domain: str, args) -> None:
 
     if not args.no_ai:
         summarize_domain(base_dir)
+
 
     print(f"[+] Recon for {domain} complete. Output in {base_dir}")

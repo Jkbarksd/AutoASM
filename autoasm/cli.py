@@ -12,7 +12,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--mappedports", help="Display mapped ports excluding specific ports", action="store_true")
     parser.add_argument("--omit", help="Ports to omit, e.g. --omit 80,443", default="80,443")
     parser.add_argument("--no-wappalyzer", help="Skip Wappalyzer fingerprinting", action="store_true")
+
     parser.add_argument("--no-ai", help="Skip AI-based risk summary", action="store_true")
+
     return parser.parse_args()
 
 
